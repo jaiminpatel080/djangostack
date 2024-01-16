@@ -1,0 +1,2 @@
+# djangostack
+currently learning djangostack
