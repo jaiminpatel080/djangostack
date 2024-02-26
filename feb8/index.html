@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body{
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Form</h1>
+        <table>
+        <tr>
+            <td><label>Full Name</label></td>
+            <td><input type="text" name="fname" id="fname" placeholder="Full Name"></td>
+        </tr>
+        <tr>
+            <td><label>Mobile Number</label></td>
+            <td><input type="tel" name="tel_no" id="tel_no" placeholder="Mobile Number"></td>
+        </tr>
+        <tr>
+            <td><label>Email_Id</label></td>
+            <td><input type="email" name="email" id="email" placeholder="Email-Id"></td>
+        </tr>
+        <tr>
+            <td><label>Password</label></td>
+            <td><input type="password" name="password" id="password" placeholder="Password"></td>
+        </tr>
+        <tr>
+            <td><label>Full Name</label></td>
+            <td><input type="password" name="c_password" id="c_password" placeholder="Confirm Password"></td>
+        </tr>
+        <tr>
+            <td>DOB</td>
+            <td><input type="date" name="dob" id="dob"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="storeData()">Submit</button>
+            </td>
+        </tr>
+    </table>
+    </div>
+    <script>
+        function storeData(){
+            let fullname = document.getElementById("fname")
+            let tel_no = document.getElementById("tel_no")
+            let email = document.getElementById("email")
+            let password = document.getElementById("password")
+            let c_password = document.getElementById("c_password")
+            let dob = document.getElementById("dob")
+
+            let data = [fullname, tel_no, email, password, c_password, dob]
+            counter=0
+            let final_data = []
+            data.map((a)=> {
+                if(!a.value){
+                    a.style.border = "2px dotted red"
+                }else{
+                    a.style.border = "2px solid gray"
+                    final_data[counter]=a.value
+                    counter++
+                }
+            })
+            if (password.value != c_password.value){
+                c_password.style.border = "2px dotted red" 
+            }else{
+                c_password.style.border = "2px solid gray"
+                localStorage.setItem("data",final_data)
+            }
+            console.log(final_data)
+        }
+    </script>
+</body>
+</html>

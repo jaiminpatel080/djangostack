@@ -26,6 +26,7 @@ let students = [
 ]
 
 students.map((m)=>{
-    console.log(m.name, "\n\tenglish :", m.marks.english, "\n\tmaths :", m.marks.maths, "\n\tscience :", m.marks.science,)
+    console.log(m.name, "\n\tenglish :", m.marks.english, "\n\tmaths :",
+     m.marks.maths, "\n\tscience :", m.marks.science,)
     console.log("-------------------------------------------")
 })

@@ -1,0 +1,15 @@
+Section-A
+
+1. CSS is used to style and format the web pages according to our need using various parameters.
+
+2. Inline CSS can be used within .html file where we are defining the tag.
+   Ex. <h1 style="color:white;" 
+
+3. HTML- HypertextMarkup Language
+   CSS- Casceding StyleSheet
+
+4. Internal CSS is written in the .html file within <head> tag.
+   External CSS is written in another .css file and linked to the main file using <link> tag.
+
+5. Webpage is a single page containing all data.
+   Website is a group of webpages interconnected to each other to enhance user experience. 
